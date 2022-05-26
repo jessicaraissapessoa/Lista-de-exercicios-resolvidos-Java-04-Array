@@ -12,26 +12,23 @@ public class listajava04_05 {
 		
 Scanner teclado = new Scanner (System.in);
 				
-/* 04. Declarar e ler um vetor de 5 números inteiro e, após, exibir o vetor na ordem inversa dos elementos digitados. */
+/* 05. Faça um programa para gerar um array de 30 elementos, onde cada elemento corresponde ao quadrado de sua posição.
+ * Depois imprima os elementos resultantes. */
 		
-	int [] vetor = new int [5];
+	double [] vetor = new double [30];
 	
 	
-	for (int indice = 0; indice < vetor.length; indice++) 
+	for (int indice = 0; indice < 30; indice++)
 	{
-		
-		System.out.println("Informe o elemento de índice " + indice + " do vetor: ");
-		vetor[indice] = teclado.nextInt();
-		
+		vetor[indice] = Math.pow(indice, 2);
 	}
 	
 	
-	for (int indice = 4; indice >= 0; indice--)
+	for (int indice = 0; indice < 30; indice++)
 	{
-		
-		System.out.println("vetor[" + indice + "] = " + vetor[indice]);
-		
+		System.out.println(vetor[indice]);
 	}
+	
 	
 	
 teclado.close();

@@ -6,7 +6,7 @@ public class listajava04_01 {
 
 	public static void main(String[] args) {
 
-//Lista de Exercícios de Java 01 - Introdução / Básico
+//Lista de Exercícios de Java 04 - Array
 //Organizador / Professor: Junio Figueiredo
 //Revisora / Diagramadora / Aluna: Jéssica Raissa Pessoa
 		
