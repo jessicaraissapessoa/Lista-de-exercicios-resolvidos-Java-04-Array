@@ -1,7 +1,7 @@
-### Lista Java - 03 - Condições, Múltipla escolha e Repetição
+### Lista Java - 04 - Array
 
 - Lista de exercícios resolvidos em Java
-- Tema: Condições, Múltipla escolha e Repetição
+- Tema: Array
 
 ##
 
