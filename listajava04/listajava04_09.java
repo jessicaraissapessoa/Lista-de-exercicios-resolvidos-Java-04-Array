@@ -16,7 +16,7 @@ Scanner teclado = new Scanner (System.in);
  * e as 10 seguintes são os mesmos números em ordem inversa. */
 		
 
-int [] vetorA = new int [6];
+int [] vetorA = new int [10];
 int [] vetorB = new int [vetorA.length];
 int [] vetorfinal = new int [vetorA.length + vetorB.length];
 
@@ -44,9 +44,26 @@ for (int iA = 0; iA < vetorA.length; iA++)
 
 //inserindo os valores em ordem padrão e os em ordem inversa:
 	
-for (int lista : vetorB) {
-	System.out.println(lista);
+for (int iA = 0; iA < vetorA.length; iA++)
+{
+	int ifinal = iA;
+	vetorfinal[ifinal] = vetorA[iA];
+}
+
+for (int iB = 0; iB < vetorB.length; iB++)
+{
+	int ifinal = iB + 10;
+	vetorfinal[ifinal] = vetorB[iB];
 }	
+
+
+//exibindo os valores do vetorfinal:
+
+for (int ifinal = 0; ifinal < (vetorA.length + vetorB.length); ifinal++)
+{
+	System.out.println("vetor[" + ifinal + "] = " + vetorfinal[ifinal]);
+}
+
 
 teclado.close();
 
