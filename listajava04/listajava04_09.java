@@ -16,67 +16,37 @@ Scanner teclado = new Scanner (System.in);
  * e as 10 seguintes são os mesmos números em ordem inversa. */
 		
 
-int [] vetorA = new int [10];
-int [] vetorB = new int [15];
-int [] vetorC = new int [vetorA.length + vetorB.length];
-
-for (int ia = 0; ia < vetorA.length; ia++) {
-	System.out.println("Informe vetorA[" + ia + "]: ");
-	vetorA[ia] = teclado.nextInt();
-}
-
-for (int ib = 0; ib < vetorB.length; ib++) {
-	System.out.println("Informe vetorB[" + ib + "]: ");
-	vetorB[ib] = teclado.nextInt();
-}
+int [] vetorA = new int [6];
+int [] vetorB = new int [vetorA.length];
+int [] vetorfinal = new int [vetorA.length + vetorB.length];
 
 
+//10 primeiros valores (ordem padrão):
 
-for (int ia = 0; ia < vetorA.length; ia++) {
-	int ic = ia;
-	vetorC[ic] = vetorA[ia];
-}
-
-for (int ib = 0; ib < vetorB.length; ib++) {
-	int ic = ib + 10;
-	vetorC[ic] = vetorB[ib];
+for (int iA = 0; iA < vetorA.length; iA++)
+{
+	System.out.println("Informe o " + (iA + 1) + "º número: ");
+	vetorA[iA] = teclado.nextInt();
 }
 
 
+//10 últimos valores (ordem inversa):
 
-for (int listaA : vetorA) {
-	System.out.println("vetorA: " + listaA);
+int inicializacao = (vetorA.length - 1);
+
+for (int iA = 0; iA < vetorA.length; iA++)
+{
+	int iB = inicializacao;
+	vetorB[iB] = vetorA[iA];
+	inicializacao--;
 }
 
-System.out.println("\n");
 
-for (int listaB : vetorB) {
-	System.out.println("vetorB: " + listaB);
-}
-
-System.out.println("\n");
-
-for (int listaC : vetorC) {
-	System.out.println("vetorC: " + listaC);
-}
+//inserindo os valores em ordem padrão e os em ordem inversa:
 	
-//	for (int indice = 0; indice < vetor.length; indice++) 
-//	{
-//		
-//		System.out.println("Informe o elemento de índice " + indice + " do vetor: ");
-//		vetor[indice] = teclado.nextInt();
-//		
-//	}
-//	
-//	
-//	for (int indice = 4; indice >= 0; indice--)
-//	{
-//		
-//		System.out.println("vetor[" + indice + "] = " + vetor[indice]);
-//		
-//	}
-	
-	
+for (int lista : vetorB) {
+	System.out.println(lista);
+}	
 
 teclado.close();
 
